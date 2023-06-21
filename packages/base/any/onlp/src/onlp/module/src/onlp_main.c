@@ -93,8 +93,8 @@ show_inventory__(aim_pvs_t* pvs, int database)
                 continue;
             }
 
-            if(database) {
-                sff_db_entry_struct(&sff, &aim_pvs_stdout);
+            if (database && into_sff_db) {
+                sff_db_entry_create_from_sff(&sff, port);
                 continue;
             }
 
